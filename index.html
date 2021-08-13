@@ -151,7 +151,11 @@
                 alert("All inputs must be written!");
                 return false;
             }
-            if (hiring.checked) {
+            else if (!extractFSA(crush(postal.value))) {
+                alert("Wrong format of Postal code!");
+                return false;
+            }
+            else if (hiring.checked) {
                 if (!hourlyrate.value) {
                     alert("Enter Hourly rate!");
                     return false;
@@ -161,11 +165,10 @@
                     return false;
                 }
             }
+            else return true;
 
-            if (!extractFSA(crush(postal.value))) {
-                alert("Wrong format of Postal code!");
-                return false;
-            }
+            
+
             
         }
         function visible() {
