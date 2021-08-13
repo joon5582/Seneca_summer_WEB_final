@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@200&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda:wght@700&family=Montserrat:wght@200&family=Source+Code+Pro&display=swap');
+#title{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block; 
+    width:600px;
+    background: #0A6EFF;
+    color:white;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+}
+html{
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+h2{
+    margin: 0px ;
+}
+h3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h5{
+    margin: 0px;
+}
+p{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#img{
+    margin: 10px;
+}
+fieldset{
+    display: inline;
+    text-align: center;
+}
+#container2{
+    width:300px;
+    text-align: left;
+    margin: 0px;
+}
+#boxes{
+    display: block;
+    
+    font-family:Arial, Helvetica, sans-serif;
+}
+#button1:hover{
+    width: 90px;
+    height: 30px;
+    font-size:10px;
+    cursor:pointer;
+    color: white;
+    margin: 6px;
+    
+    background-color: black;
+    border: 0px;
+    border-radius: 30px;
+}
+#button1{
+    width: 90px;
+    height: 30px;
+    font-size:10px;
+    cursor:pointer;
+    color: black;
+    margin: 6px;
+    
+    background: white;
+    border: 0px;
+    border-radius: 30px;
+  }
+  #button2:hover{
+    width: 90px;
+    height: 30px;
+    font-size:10px;
+    margin: 6px;
+    color: black;
+    border: 0px;
+    background: white;
+    cursor:pointer;
+    border-radius: 30px;
+}
+  #button2{
+      width: 90px;
+      height: 30px;
+      font-size:10px;
+      margin: 6px;
+      color: white;
+      border: 0px;
+      background: black;
+      cursor:pointer;
+      border-radius: 30px;
+  }
+#infographic{
+    font-family: 'Source Code Pro', monospace;
+    color:#1F2247;
+    margin: 10px;
+    display: inline-block;
+    text-align:left;
+    font-size: 14px;
+    box-shadow: 5px 5px 5px grey;
+    background-color:#F1F0EC;
+}
+ul{
+    list-style:none;
+}
+#aboutme{
+    float: left;
+    width: 500px;
+}
+#basicinfo{
+    float:right;
+    text-align:left;
+    width: 400px;
+}
+#appear{
+    display: none;
+    margin-top: 50px;
+}
+#contactme{
+    font-family: 'Courgette', cursive;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+.education{
+    display: inline-block;
+    height: 150px;
+    box-shadow: 5px 5px 5px grey;
+}
+textarea{
+    margin:10px;
+    width:200px;
+    height: 60px;
+}
+.edutitle{
+    float:left;
+    font-family: 'Montserrat', sans-serif;
+    color:#405336;
+    height: 150px;
+    width: 250px;
+
+    background-color:#ECD8CF;
+}
+.innertext{
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.edudetail{
+    font-family: 'Courgette', cursive;
+    position: relative;
+    left: 0%;
+    top:30%;
+    width:500px;
+    float:right;
+    text-align: left;
+    color:teal;
+}
+fieldset{
+    border: 0px;
+}
+form{ 
+    margin:auto; 
+    width:500px;  
+    
+}

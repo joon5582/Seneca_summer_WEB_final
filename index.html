@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=1, initial-scale=1" style="max-width: 1100px;">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="title">
+            <img src="Picture1.jpg" id="img" width="200px">
+            <h2>Junwoo Lee</h2>
+            <h3>CTO, Computer Scientist, Backend Developer</h3>
+            <div id="boxes">
+                <input id="button1" type="button" value="Resume" onclick="location.href='#aboutme'">
+                <input id="button2" type="button" value="Contact Me" onclick="location.href='#contactme'">
+            </div>
+        </div>
+
+        </br>
+        <div id="infographic">
+            <div id="aboutme">
+                <h3>About Me</h3>
+                <p>Hello, my name is Junwoo Lee. I am from South Korea and 28 years old. I
+                    worked as a math teacher at a private high school in Korea. I like all logic-related disciplines,
+                    and math was especially my favorite. That's why I
+                    started teaching math. However, I chose to be a programmer because I
+                    wanted to do something that shows my ability in the field rather than
+                    teaching. Therefore I decided to come to Canada to study computer programming, and I
+                    entered
+                    Seneca's CPA(computer programming & analysis) course. And after finishing my first great winter
+                    semester by online in Korea, I left and finally arrived in Toronto on May 3rd! Now I'm living
+                    in
+                    North York and really enjoying my life in Canada. The weather and air quality are perfect, and
+                    the
+                    people are friendly. I think I'm going to fall in love with Canada. I'm so excited to start a
+                    new life in
+                    a completely different environment. </p>
+            </div>
+            <div id="basicinfo">
+                <ul>
+                    <h3>Basic Information</h3>
+                    <li>AGE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28
+                    </li>
+                    <li>
+                        GENDER: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MALE
+                    </li>
+                    <li>EMAIL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jlee@myseneca.ca
+                    </li>
+                    <li>LANGUAGE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Korean, English</li>
+                </ul>
+            </div>
+        </div></br>
+        <div class="education" id="education">
+            <div class="edutitle">
+                <div class="innertext">
+                    <h5>2011 - 2016</h5>
+                    <h3>Bachelor's Degree</h3>
+                </div>
+            </div>
+            <div class="edudetail">
+                <p>Bachelor's Degree</br>
+                    University of Seoul</p>
+            </div>
+        </div>
+        </br>
+        <div class="education">
+            <div class="edutitle">
+                <div class="innertext">
+                    <h5>2013 - 2015</h5>
+
+                    <h3>Korean Air Force</h3>
+                </div>
+            </div>
+            <div class="edudetail">
+                <p>Sergeant</br>
+                    Korea 3rd Flight Training Wing</p>
+            </div>
+        </div>
+        </br>
+        <div class="education">
+            <div class="edutitle">
+                <div class="innertext">
+                    <h5>2020 - 2022(expected)</h5>
+
+                    <h3>Advanced Diploma</h3>
+                </div>
+            </div>
+            <div class="edudetail">
+                <p>Advanced Diploma</br>
+                    Seneca College</p>
+            </div>
+        </div>
+        <br><br>
+        <form id="contactme" method="POST" action="https://httpbin.org/post">
+
+            <fieldset>
+                <legend>Contact Me</legend>
+                <div id="container2">
+                    
+                    Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Name goes here" name="firstname">
+                    <br><br>
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="email address goes here" name="email">
+                    <br><br>
+                    Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Address goes here" name="address">
+                    <br><br>
+                    City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input list="cities" placeholder="Select City" name="cities">
+                    <datalist id="cities">
+                        <option value="Toronto">
+                        <option value="Vancouver">
+                        <option value="Montreal">
+                        <option value="Calgary">
+                        <option value="Ottawa">
+                    </datalist>
+                    <br><br>
+                    Postal Code:&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Postal Code goes here"
+                        id="postalcode">
+                    <br><br>
+                    <input type="radio" name="options" id="option1" value="questions" onchange="visible()" />Questions
+                    <input type="radio" name="options" id="option2" value="comments" onchange="visible()" />Comments
+                    <input type="radio" name="options" id="option3" value="hiring" onchange="visible()" />Hiring
+                    <br>
+                    <div id="appear">
+                        <br>
+                        Hourly rate ($):
+                        <input type="number" name="hourlyrate" id="hourlyrate">
+                        <br>
+                    </div>
+
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message to send<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="textbox" id="textbox"></textarea>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+    <script>
+        
+        var form = document.getElementById("contactme");
+        form.onsubmit = function () {
+            var form = document.getElementById("contactme");
+            var hiring = document.getElementById("option3");
+            var hourlyrate = document.getElementById("hourlyrate");
+            var postal = document.getElementById("postalcode");
+            if(!(form.firstname.value&&form.email.value&&form.address.value&&form.cities.value&&form.options.value))
+            {
+                alert("All inputs must be written!");
+                return false;
+            }
+            if (hiring.checked) {
+                if (!hourlyrate.value) {
+                    alert("Enter Hourly rate!");
+                    return false;
+                }
+                else if (hourlyrate.value <= 12) {
+                    alert("Too small hourly rate! More than $12")
+                    return false;
+                }
+            }
+
+            if (!extractFSA(crush(postal.value))) {
+                alert("Wrong format of Postal code!");
+                return false;
+            }
+            
+        }
+        function visible() {
+            if (document.getElementById('contactme').options.value == 'hiring') {
+                document.getElementById('appear').style.display = 'unset';
+            }
+            else {
+                document.getElementById('appear').style.display = 'none';
+            }
+        }
+        function crush(value) {
+            value = value.replace(/[ -]/g, "").toLowerCase();
+            return value;
+        }
+        function extractFSA(postalCode) {
+            var regex = /^[abceghjklmnprstvxy][0-9][a-z]/;
+            var res = false;
+            if (regex.test(postalCode))
+                res = postalCode.substring(0, 4);
+            return res;
+        }
+    </script>
+</body>
+
+
+</html>
