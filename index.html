@@ -99,13 +99,13 @@
                 <legend>Contact Me</legend>
                 <div id="container2">
                     
-                    Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Name goes here" name="firstname">
+                    Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Name goes here" name="firstname" required>
                     <br><br>
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="email address goes here" name="email">
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="email address goes here" name="email" required>
                     <br><br>
-                    Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Address goes here" name="address">
+                    Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Address goes here" name="address" required>
                     <br><br>
-                    City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input list="cities" placeholder="Select City" name="cities">
+                    City:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input list="cities" placeholder="Select City" name="cities" required>
                     <datalist id="cities">
                         <option value="Toronto">
                         <option value="Vancouver">
@@ -115,7 +115,7 @@
                     </datalist>
                     <br><br>
                     Postal Code:&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Postal Code goes here"
-                        id="postalcode">
+                        id="postalcode" required>
                     <br><br>
                     <input type="radio" name="options" id="option1" value="questions" onchange="visible()" />Questions
                     <input type="radio" name="options" id="option2" value="comments" onchange="visible()" />Comments
@@ -124,7 +124,7 @@
                     <div id="appear">
                         <br>
                         Hourly rate ($):
-                        <input type="number" name="hourlyrate" id="hourlyrate">
+                        <input type="number" name="hourlyrate" id="hourlyrate" >
                         <br>
                     </div>
 
@@ -146,9 +146,9 @@
             var hiring = document.getElementById("option3");
             var hourlyrate = document.getElementById("hourlyrate");
             var postal = document.getElementById("postalcode");
-            if(!(form.firstname.value&&form.email.value&&form.address.value&&form.cities.value&&form.options.value))
+            if(!(form.options.value))
             {
-                alert("All inputs must be written!");
+                alert("Choose the type of message!");
                 return false;
             }
             else if (!extractFSA(crush(postal.value))) {
